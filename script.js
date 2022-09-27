@@ -7,7 +7,7 @@ button.addEventListener("click",()=>{
 
     const deleteBtn = document.createElement("button")
     deleteBtn.innerText ="Delete"
-    
+
     listItem.appendChild(deleteBtn);
     list.appendChild(listItem)
     
@@ -15,4 +15,14 @@ button.addEventListener("click",()=>{
             list.removeChild(listItem);
         })
 })
+
+const dateButton = document.getElementById("date");
+const showDate = document.getElementById("show_date");
+
+dateButton.addEventListener("click", () => {
+    showDate.innerText = "";
+    const date = document.createElement("p");
+    date.innerText = Date();
+    showDate.appendChild(date);
+});
 
